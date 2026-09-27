@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Create account &mdash; Talent Forge
+  </title>
+  <link href="../css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <nav class="navbar">
+   <div class="container nav-inner">
+    <a class="brand" href="../index.html">
+     Talent
+     <span>
+      Forge
+     </span>
+    </a>
+    <div class="nav-links">
+     <a class="keep" href="signin.html">
+      Sign in
+     </a>
+    </div>
+   </div>
+  </nav>
+  <main class="page">
+   <div class="container">
+    <div class="auth-shell card fade-in">
+     <h1 class="card-title">
+      Create your account
+     </h1>
+     <p class="card-subtitle">
+      Choose your role and start Module 1.
+     </p>
+     <form id="signupForm">
+      <div class="field">
+       <label>
+        Email
+       </label>
+       <input autocomplete="email" name="email" required="" type="email"/>
+      </div>
+      <div class="form-row">
+       <div class="field">
+        <label>
+         Password
+        </label>
+        <input minlength="8" name="password" required="" type="password"/>
+       </div>
+       <div class="field">
+        <label>
+         Confirm password
+        </label>
+        <input minlength="8" name="confirmPassword" required="" type="password"/>
+       </div>
+      </div>
+      <div class="field">
+       <label>
+        I am joining as
+       </label>
+       <select name="role" required="">
+        <option value="freelancer">
+         Freelancer / Job Seeker
+        </option>
+        <option value="client">
+         Client
+        </option>
+       </select>
+      </div>
+      <button class="btn btn-primary btn-block" type="submit">
+       Continue
+      </button>
+     </form>
+    </div>
+   </div>
+  </main>
+  <script src="../js/utils.js">
+  </script>
+  <script src="../js/pages/signup.js">
+  </script>
+ </body>
+</html>
+

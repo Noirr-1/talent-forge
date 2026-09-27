@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Career Profile — Talent Forge</title>
+  <link href="../../css/style.css" rel="stylesheet">
+</head>
+<body>
+  <main class="page ai-results-page">
+    <div class="container ai-results-shell">
+      <header class="ai-results-header fade-in">
+        <span class="eyebrow">Module 1 complete</span>
+        <h1>Your AI Career Profile</h1>
+        <p>Your profile information is ready for Talent Forge AI to turn into a professional summary, career guidance, and practical profile improvements.</p>
+      </header>
+
+      <div class="ai-status fade-in delay-1" id="aiStatus">
+        <div>
+          <strong id="aiStatusTitle">Ready for AI analysis</strong>
+          <p id="aiStatusText">Once the backend is connected, this page will display live AI-generated results from your profile.</p>
+        </div>
+        <button class="btn btn-primary" id="generateAnalysis" type="button">Generate AI analysis</button>
+      </div>
+
+      <section class="ai-results-grid">
+        <article class="ai-output-card ai-output-wide fade-in delay-1">
+          <div class="ai-output-heading">
+            <span class="ai-output-number">01</span>
+            <div>
+              <span class="ai-output-kicker">AI Profile Summary</span>
+              <h2>Professional summary</h2>
+            </div>
+          </div>
+          <div class="ai-output-content" id="profileSummary">
+            <p class="ai-placeholder">Your AI-generated professional profile summary will appear here.</p>
+          </div>
+        </article>
+
+        <article class="ai-output-card fade-in delay-2">
+          <div class="ai-output-heading">
+            <span class="ai-output-number">02</span>
+            <div>
+              <span class="ai-output-kicker">AI Career Guidance</span>
+              <h2>Career direction</h2>
+            </div>
+          </div>
+          <div class="ai-output-content" id="careerGuidance">
+            <p class="ai-placeholder">Recommended career directions, skill gaps, and next steps will appear here.</p>
+          </div>
+        </article>
+
+        <article class="ai-output-card fade-in delay-2">
+          <div class="ai-output-heading">
+            <span class="ai-output-number">03</span>
+            <div>
+              <span class="ai-output-kicker">AI Profile Improvement</span>
+              <h2>Improve your profile</h2>
+            </div>
+          </div>
+          <div class="ai-output-content" id="profileImprovement">
+            <p class="ai-placeholder">Practical recommendations for strengthening your profile will appear here.</p>
+          </div>
+        </article>
+      </section>
+
+      <div class="ai-results-actions fade-in delay-2">
+        <a class="btn" href="review.html">← Back to review</a>
+        <a class="btn btn-secondary" href="../../index.html">Return home</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../js/utils.js"></script>
+  <script src="../../js/pages/freelancer-ai-profile.js"></script>
+</body>
+</html>

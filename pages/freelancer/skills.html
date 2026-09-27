@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Skills &mdash; Talent Forge
+  </title>
+  <link href="../../css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <main class="page" data-step="4">
+   <div class="container narrow">
+    <div class="step-shell fade-in">
+     <div class="step-meta">
+      <span data-step-label="">
+      </span>
+      <span data-progress-pct="">
+      </span>
+     </div>
+     <div class="progress">
+      <div class="progress-bar" data-progress-bar="">
+      </div>
+     </div>
+    </div>
+    <div class="card fade-in delay-1">
+     <h1 class="card-title">
+      Add skills and interests.
+     </h1>
+     <p class="card-subtitle">
+      Skill levels are self-claimed, ready for later AI-assisted assessment.
+     </p>
+     <div class="form-row">
+      <div class="field">
+       <label>
+        Skill
+       </label>
+       <input id="skillInput" placeholder="e.g. Python"/>
+      </div>
+      <div class="field">
+       <label>
+        Self-claimed level
+       </label>
+       <select id="skillLevel">
+        <option>
+         Beginner
+        </option>
+        <option>
+         Intermediate
+        </option>
+        <option>
+         Advanced
+        </option>
+        <option>
+         Expert
+        </option>
+       </select>
+      </div>
+     </div>
+     <button class="btn" id="addSkill" type="button">
+      + Add skill
+     </button>
+     <div class="divider">
+     </div>
+     <div id="skillList">
+     </div>
+     <div class="divider">
+     </div>
+     <h2 class="section-title">
+      Interests
+     </h2>
+     <div class="chip-row">
+      <button class="chip" data-value="Artificial Intelligence" type="button">
+       Artificial Intelligence
+      </button>
+      <button class="chip" data-value="Cyber Security" type="button">
+       Cyber Security
+      </button>
+      <button class="chip" data-value="Web Development" type="button">
+       Web Development
+      </button>
+      <button class="chip" data-value="Data" type="button">
+       Data
+      </button>
+      <button class="chip" data-value="Design" type="button">
+       Design
+      </button>
+      <button class="chip" data-value="Marketing" type="button">
+       Marketing
+      </button>
+      <button class="chip" data-value="Freelancing" type="button">
+       Freelancing
+      </button>
+     </div>
+     <div class="form-actions">
+      <a class="btn" href="education.html">
+       &larr; Back
+      </a>
+      <button class="btn btn-primary" id="skillsNext">
+       Continue &rarr;
+      </button>
+     </div>
+    </div>
+   </div>
+  </main>
+  <script src="../../js/utils.js">
+  </script>
+  <script src="../../js/stepper.js">
+  </script>
+  <script src="../../js/pages/freelancer-skills.js">
+  </script>
+ </body>
+</html>
+

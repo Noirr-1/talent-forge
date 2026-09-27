@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Goals &mdash; Talent Forge
+  </title>
+  <link href="../../css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <main class="page" data-step="5">
+   <div class="container narrow">
+    <div class="step-shell fade-in">
+     <div class="step-meta">
+      <span data-step-label="">
+      </span>
+      <span data-progress-pct="">
+      </span>
+     </div>
+     <div class="progress">
+      <div class="progress-bar" data-progress-bar="">
+      </div>
+     </div>
+    </div>
+    <form class="card fade-in delay-1" data-store-form="goals">
+     <h1 class="card-title">
+      Where do you want to go?
+     </h1>
+     <p class="card-subtitle">
+      Your career goals will later support matching and AI-assisted guidance.
+     </p>
+     <div class="field">
+      <label>
+       Target role
+      </label>
+      <input name="target_role" placeholder="e.g. Backend Developer" required=""/>
+     </div>
+     <div class="field">
+      <label>
+       Target industry
+      </label>
+      <input name="target_industry" placeholder="e.g. Technology"/>
+     </div>
+     <div class="field">
+      <label>
+       Target level
+      </label>
+      <select name="target_level">
+       <option>
+        Entry Level
+       </option>
+       <option>
+        Junior
+       </option>
+       <option>
+        Mid-Level
+       </option>
+       <option>
+        Senior
+       </option>
+       <option>
+        Lead
+       </option>
+      </select>
+     </div>
+     <div class="field">
+      <label>
+       Goal description
+      </label>
+      <textarea name="description" placeholder="Describe what you want to achieve"></textarea>
+     </div>
+     <div class="form-actions">
+      <a class="btn" href="skills.html">
+       &larr; Back
+      </a>
+      <button class="btn btn-primary">
+       Review profile &rarr;
+      </button>
+     </div>
+    </form>
+   </div>
+  </main>
+  <script src="../../js/utils.js">
+  </script>
+  <script src="../../js/stepper.js">
+  </script>
+  <script src="../../js/autobind.js">
+  </script>
+  <script>
+   document.querySelector('[data-store-form]').addEventListener('submit',e=>{e.preventDefault();location.href='review.html'});
+  </script>
+ </body>
+</html>
+

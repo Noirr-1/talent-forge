@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Choose your role — Talent Forge</title>
+    <link href="../css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <a class="brand" href="../index.html">
+          Talent <span>Forge</span>
+        </a>
+        <div class="nav-links">
+          <a class="keep" href="signin.html">Sign in</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="role-page">
+      <section class="container role-choice-shell">
+        <div class="role-heading fade-in">
+          <div class="eyebrow">Get started with Talent Forge</div>
+          <h1>How are you joining us?</h1>
+          <p>
+            Choose the path that best describes you. You can build your professional
+            profile as a freelancer or create a client profile to find talent.
+          </p>
+        </div>
+
+        <div class="role-grid role-choice-grid">
+          <a class="role-card role-choice-card fade-in delay-1" href="signup.html?role=freelancer">
+            <div class="role-icon" aria-hidden="true">F</div>
+            <div>
+              <span class="role-kicker">Build your career</span>
+              <h3>I'm a Freelancer</h3>
+              <p>
+                Create your professional profile, add your education, skills,
+                interests and career goals.
+              </p>
+              <span class="role-link">Continue as Freelancer <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="role-card role-choice-card fade-in delay-2" href="signup.html?role=client">
+            <div class="role-icon" aria-hidden="true">C</div>
+            <div>
+              <span class="role-kicker">Find great talent</span>
+              <h3>I'm a Client</h3>
+              <p>
+                Create a client profile for your company and prepare to connect
+                with skilled professionals.
+              </p>
+              <span class="role-link">Continue as Client <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </div>
+
+        <p class="role-signin fade-in delay-3">
+          Already have an account? <a href="signin.html">Sign in</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        &copy; <span data-year></span> Talent Forge · Module 1 Frontend
+      </div>
+    </footer>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/autobind.js"></script>
+  </body>
+</html>

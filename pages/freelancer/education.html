@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Education &mdash; Talent Forge
+  </title>
+  <link href="../../css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <main class="page" data-step="3">
+   <div class="container narrow">
+    <div class="step-shell fade-in">
+     <div class="step-meta">
+      <span data-step-label="">
+      </span>
+      <span data-progress-pct="">
+      </span>
+     </div>
+     <div class="progress">
+      <div class="progress-bar" data-progress-bar="">
+      </div>
+     </div>
+    </div>
+    <div class="card fade-in delay-1">
+     <h1 class="card-title">
+      Add your education.
+     </h1>
+     <p class="card-subtitle">
+      You can add multiple records, matching the planned Module 1 education API.
+     </p>
+     <form id="educationForm">
+      <div class="form-row">
+       <div class="field">
+        <label>
+         Institution
+        </label>
+        <input name="institution" required=""/>
+       </div>
+       <div class="field">
+        <label>
+         Degree
+        </label>
+        <input name="degree" required=""/>
+       </div>
+      </div>
+      <div class="form-row">
+       <div class="field">
+        <label>
+         Field of study
+        </label>
+        <input name="field_of_study"/>
+       </div>
+       <div class="field">
+        <label>
+         Education level
+        </label>
+        <select name="education_level">
+         <option>
+          High School
+         </option>
+         <option>
+          Diploma
+         </option>
+         <option>
+          Bachelor's
+         </option>
+         <option>
+          Master's
+         </option>
+         <option>
+          Doctorate
+         </option>
+         <option>
+          Other
+         </option>
+        </select>
+       </div>
+      </div>
+      <div class="form-row">
+       <div class="field">
+        <label>
+         Start year
+        </label>
+        <input max="2100" min="1950" name="start_year" type="number"/>
+       </div>
+       <div class="field">
+        <label>
+         Graduation year
+        </label>
+        <input max="2100" min="1950" name="graduation_year" type="number"/>
+       </div>
+      </div>
+      <div class="field">
+       <label>
+        Description
+       </label>
+       <textarea name="description"></textarea>
+      </div>
+      <button class="btn" type="submit">
+       + Add education
+      </button>
+     </form>
+     <div class="divider">
+     </div>
+     <div class="dynamic-list" id="educationList">
+     </div>
+     <div class="form-actions">
+      <a class="btn" href="personal-info.html">
+       &larr; Back
+      </a>
+      <a class="btn btn-primary" href="skills.html">
+       Continue &rarr;
+      </a>
+     </div>
+    </div>
+   </div>
+  </main>
+  <script src="../../js/utils.js">
+  </script>
+  <script src="../../js/stepper.js">
+  </script>
+  <script src="../../js/pages/freelancer-education.js">
+  </script>
+ </body>
+</html>
+

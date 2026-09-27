@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Personal info &mdash; Talent Forge
+  </title>
+  <link href="../../css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <main class="page" data-step="2">
+   <div class="container narrow">
+    <div class="step-shell fade-in">
+     <div class="step-meta">
+      <span data-step-label="">
+      </span>
+      <span data-progress-pct="">
+      </span>
+     </div>
+     <div class="progress">
+      <div class="progress-bar" data-progress-bar="">
+      </div>
+     </div>
+    </div>
+    <form action="education.html" class="card fade-in delay-1" data-store-form="personal">
+     <h1 class="card-title">
+      Tell us about yourself.
+     </h1>
+     <p class="card-subtitle">
+      These fields map directly to the planned freelancer profile backend.
+     </p>
+     <div class="field">
+      <label>
+       Full name
+      </label>
+      <input name="full_name" required=""/>
+     </div>
+     <div class="field">
+      <label>
+       Location
+      </label>
+      <input name="location" placeholder="City, Country"/>
+     </div>
+     <div class="field">
+      <label>
+       Professional bio
+      </label>
+      <textarea name="bio" placeholder="A short professional introduction"></textarea>
+     </div>
+     <div class="form-row">
+      <div class="field">
+       <label>
+        Experience level
+       </label>
+       <select name="experience_level">
+        <option>
+         Beginner
+        </option>
+        <option>
+         Intermediate
+        </option>
+        <option>
+         Advanced
+        </option>
+        <option>
+         Expert
+        </option>
+       </select>
+      </div>
+      <div class="field">
+       <label>
+        Years of experience
+       </label>
+       <input min="0" name="years_of_experience" step="0.5" type="number"/>
+      </div>
+     </div>
+     <div class="field">
+      <label>
+       CV (frontend preview)
+      </label>
+      <label class="upload" for="cvInput">
+       Choose a PDF/DOC/DOCX CV
+       <input accept=".pdf,.doc,.docx" id="cvInput" type="file"/>
+       <div class="filename" id="cvName">
+        No file selected
+       </div>
+      </label>
+      <div class="hint">
+       The file itself will be uploaded to the backend later; browsers cannot persist local files in localStorage.
+      </div>
+     </div>
+     <div class="form-actions">
+      <a class="btn" href="welcome.html">
+       &larr; Back
+      </a>
+      <button class="btn btn-primary" type="submit">
+       Continue &rarr;
+      </button>
+     </div>
+    </form>
+   </div>
+  </main>
+  <script src="../../js/utils.js">
+  </script>
+  <script src="../../js/stepper.js">
+  </script>
+  <script src="../../js/autobind.js">
+  </script>
+  <script>
+   document.getElementById('cvInput').addEventListener('change',e=>{document.getElementById('cvName').textContent=e.target.files[0]?.name||'No file selected';if(e.target.files[0])AC.updateStore({cvMeta:{name:e.target.files[0].name,type:e.target.files[0].type,size:e.target.files[0].size}})});document.querySelector('[data-store-form]').addEventListener('submit',e=>{e.preventDefault();location.href='education.html'});
+  </script>
+ </body>
+</html>
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Client profile &mdash; Talent Forge
+  </title>
+  <link href="../../css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <main class="page">
+   <div class="container narrow">
+    <form class="card fade-in" id="clientForm">
+     <div class="eyebrow">
+      Client profile
+     </div>
+     <h1 class="card-title">
+      Tell us about your company.
+     </h1>
+     <p class="card-subtitle">
+      These fields map to the planned Module 1 client profile endpoints.
+     </p>
+     <div class="form-row">
+      <div class="field">
+       <label>
+        Full name
+       </label>
+       <input name="full_name" required=""/>
+      </div>
+      <div class="field">
+       <label>
+        Company name
+       </label>
+       <input name="company_name" required=""/>
+      </div>
+     </div>
+     <div class="field">
+      <label>
+       Location
+      </label>
+      <input name="location"/>
+     </div>
+     <div class="field">
+      <label>
+       Company description
+      </label>
+      <textarea name="company_description"></textarea>
+     </div>
+     <div class="field">
+      <label>
+       Website
+      </label>
+      <input name="website" placeholder="https://" type="url"/>
+     </div>
+     <button class="btn btn-primary btn-block">
+      Create client profile
+     </button>
+    </form>
+   </div>
+  </main>
+  <script src="../../js/utils.js">
+  </script>
+  <script src="../../js/pages/client-signup.js">
+  </script>
+ </body>
+</html>
+
