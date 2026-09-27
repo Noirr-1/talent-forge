@@ -1,5 +1,9 @@
 window.AC = {
-  API_BASE_URL: "/api/v1",
+  API_BASE_URL:
+  window.location.hostname === "localhost" ||
+  window.location.hostname === "127.0.0.1"
+    ? "http://127.0.0.1:8000/api/v1"
+    : "/api/v1",
   storeKey: "talentForgeWizard",
   tokenKey: "talentForgeToken",
   getStore() {
