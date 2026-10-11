@@ -1,0 +1,372 @@
+
+/* ==========================================
+   TALENT FORGE — AI CAREER RESULTS
+   Module 1
+   ========================================== */
+
+.ai-results-page {
+  min-height: 100vh;
+  background: #F7F4ED;
+  padding: 65px 20px 90px;
+  color: #172342;
+}
+
+.ai-results-shell {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   PAGE HEADER
+   ========================================== */
+
+.ai-results-header {
+  max-width: 850px;
+  margin-bottom: 38px;
+}
+
+.ai-results-header .eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #2C826D;
+  font-family: var(--tf-font-mono, monospace);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.ai-results-header h1 {
+  margin: 0 0 20px;
+  color: #172342;
+  font-family: var(--tf-font-heading, Georgia, serif);
+  font-size: clamp(48px, 6vw, 76px);
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+}
+
+.ai-results-header > p {
+  max-width: 700px;
+  margin: 0;
+  color: #69748A;
+  font-family: var(--tf-font-body, Arial, sans-serif);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   AI STATUS / GENERATE PANEL
+   ========================================== */
+
+.ai-results-page .ai-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 28px;
+  padding: 27px 30px;
+  background: #EAF2ED;
+  border: 1px solid #C7DED5;
+  border-radius: 9px;
+  box-shadow: none;
+}
+
+.ai-results-page .ai-status > div {
+  min-width: 0;
+}
+
+.ai-results-page #aiStatusTitle {
+  display: block;
+  margin-bottom: 7px;
+  color: #172342;
+  font-family: var(--tf-font-body, Arial, sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ai-results-page #aiStatusText {
+  margin: 0;
+  color: #516D62;
+  font-family: var(--tf-font-body, Arial, sans-serif);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Generate button */
+.ai-results-page #generateAnalysis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 48px;
+  padding: 12px 22px;
+  background: #172342;
+  color: #FFFFFF;
+  border: 1px solid #172342;
+  border-radius: 5px;
+  font-family: var(--tf-font-body, Arial, sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ai-results-page #generateAnalysis:hover:not(:disabled) {
+  background: #2C826D;
+  border-color: #2C826D;
+  transform: translateY(-1px);
+}
+
+.ai-results-page #generateAnalysis:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+/* ==========================================
+   RESULTS GRID
+   ========================================== */
+
+.ai-results-page .ai-results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* AI result cards */
+.ai-results-page .ai-output-card {
+  min-width: 0;
+  padding: 35px;
+  background: #FFFFFF;
+  border: 1px solid #D9D1C2;
+  border-radius: 9px;
+  box-shadow: 0 12px 35px rgba(23, 35, 66, 0.035);
+  overflow-wrap: anywhere;
+}
+
+/* Full-width professional summary */
+.ai-results-page .ai-output-wide {
+  grid-column: 1 / -1;
+}
+
+/* Card headings */
+.ai-results-page .ai-output-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #E7E0D5;
+}
+
+.ai-results-page .ai-output-heading > div {
+  min-width: 0;
+}
+
+.ai-results-page .ai-output-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+  background: #E5F0EB;
+  color: #2C826D;
+  border: 1px solid #C7DED5;
+  border-radius: 7px;
+  font-family: var(--tf-font-mono, monospace);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ai-results-page .ai-output-kicker {
+  display: block;
+  margin: 1px 0 8px;
+  color: #2C826D;
+  font-family: var(--tf-font-mono, monospace);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.ai-results-page .ai-output-heading h2 {
+  margin: 0;
+  color: #172342;
+  font-family: var(--tf-font-heading, Georgia, serif);
+  font-size: clamp(29px, 3.5vw, 38px);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+/* ==========================================
+   GENERATED AI CONTENT
+   ========================================== */
+
+.ai-results-page .ai-output-content {
+  color: #35415A;
+  font-family: var(--tf-font-body, Arial, sans-serif);
+  font-size: 14px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.ai-results-page .ai-output-content p {
+  margin: 0 0 14px;
+}
+
+.ai-results-page .ai-output-content p:last-child {
+  margin-bottom: 0;
+}
+
+.ai-results-page .ai-output-content ul,
+.ai-results-page .ai-output-content ol {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.ai-results-page .ai-output-content li {
+  margin-bottom: 12px;
+  padding-left: 4px;
+}
+
+.ai-results-page .ai-output-content li::marker {
+  color: #2C826D;
+}
+
+.ai-results-page .ai-output-content strong {
+  color: #172342;
+  font-weight: 700;
+}
+
+.ai-results-page .ai-output-content h3 {
+  margin: 22px 0 12px;
+  color: #172342;
+  font-family: var(--tf-font-heading, Georgia, serif);
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* Placeholder content */
+.ai-results-page .ai-placeholder {
+  color: #8B93A0;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   BOTTOM ACTIONS
+   ========================================== */
+
+.ai-results-page .ai-results-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 32px;
+}
+
+.ai-results-page .ai-results-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 47px;
+  padding: 12px 23px;
+  background: transparent;
+  color: #172342;
+  border: 1px solid #D9D1C2;
+  border-radius: 5px;
+  font-family: var(--tf-font-body, Arial, sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ai-results-page .ai-results-actions .btn:hover {
+  color: #2C826D;
+  border-color: #2C826D;
+}
+
+.ai-results-page .ai-results-actions .btn-secondary {
+  background: #172342;
+  color: #FFFFFF;
+  border-color: #172342;
+}
+
+.ai-results-page .ai-results-actions .btn-secondary:hover {
+  background: #2C826D;
+  color: #FFFFFF;
+  border-color: #2C826D;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 760px) {
+  .ai-results-page {
+    padding: 40px 15px 65px;
+  }
+
+  .ai-results-header h1 {
+    font-size: clamp(42px, 9vw, 58px);
+  }
+
+  .ai-results-page .ai-status {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px;
+  }
+
+  .ai-results-page #generateAnalysis {
+    width: 100%;
+  }
+
+  .ai-results-page .ai-results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-results-page .ai-output-wide {
+    grid-column: auto;
+  }
+
+  .ai-results-page .ai-output-card {
+    padding: 26px 22px;
+  }
+
+  .ai-results-page .ai-output-heading {
+    gap: 14px;
+  }
+
+  .ai-results-page .ai-results-actions .btn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 430px) {
+  .ai-results-page .ai-output-heading h2 {
+    font-size: 28px;
+  }
+
+  .ai-results-page .ai-output-number {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-results-page #generateAnalysis {
+    transition: none;
+  }
+
+  .ai-results-page #generateAnalysis:hover {
+    transform: none;
+  }
+}
